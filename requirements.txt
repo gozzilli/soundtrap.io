@@ -1,0 +1,10 @@
+Django
+Pillow
+django-bootstrap3
+psycopg2
+django-stdimage
+
+django-envelope
+django-honeypot
+django-braces
+django-crispy-forms

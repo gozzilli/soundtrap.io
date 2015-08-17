@@ -1,0 +1,29 @@
+{% extends 'project/bootstrap.html' %}
+
+{% load url from future %}
+
+{% load bootstrap3 %}
+
+
+{% block bootstrap3_content %}
+
+	{% include "project/navbar.html" %}
+    
+	<div class="container">
+	
+		{% block content %}(contents here){% endblock %}
+    
+    </div>
+    
+    {% block footer %}
+    <hr/>
+    <div class="footer text-center small">
+	    <p>
+	    	Copyright &copy; 2015 soundtrap.io<br>
+	    	All rights reserved
+	    	
+	    </p>
+    </div>
+    {% endblock %}
+
+{% endblock %}

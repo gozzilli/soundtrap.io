@@ -1,0 +1,49 @@
+{% extends 'mysite/base.html' %}
+
+{% load url from future %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+{% load hide_email %}
+{% load envelope_tags %}
+
+{% block title %}Contact{% endblock %}
+{% block content %}
+
+	
+	<h1>Contact</h1>
+
+	<p>
+	If you have a question or would like to talk to me about something, use this
+	form or send an e-mail directly using the link on the right.
+	</p>
+	
+    {% render_contact_form %}
+	
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="form">
+	
+				<p class="note">Fields with <span class="required">*</span> are required.</p>
+		
+			</div><!-- form -->
+	
+		</div> <!-- span6 left -->
+		
+		<div class="col-lg-4">
+			<div class="well">
+				<h5>Contact</h5>
+				Davide Zilli |
+				<a href="http://twitter.com/davidezilli">@davidezilli</a><br/>
+				{% hide_email "dzilli@robots.ox.ac.uk" %} <small>(work)</small><br />
+				{% hide_email "davide@zillis.net" %}      <small>(personal)</small><br/>
+				University of Oxford, <br/>
+				OX1 3PJ <br/>
+				Oxford <br/>
+			</div>
+			<!--<div class="well">
+				<h5>Social</h5>
+			</div>-->
+		</div>
+	</div> <!-- row -->
+	
+{% endblock %}

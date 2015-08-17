@@ -1,0 +1,108 @@
+{% extends 'project/base.html' %}
+
+{% load url from future %}
+{% load bootstrap3 %}
+{% load staticfiles %}
+
+
+{% block title %}soundtrap.io – Home{% endblock %}
+{% block content %}
+
+	<div class="text-center header">
+        <img src="{% static 'project/img/logo1.png' %}">
+        <h1>soundtrap.io</h1>
+        <h2>open acoustic logger for conservation</h2>
+    </div>
+    
+    
+    <div class="container">
+    
+    	<div class="row text-center info-button">
+   	        <button class="btn btn-default" onclick="$('div#description').slideToggle(300)">What is it?</button>
+    	</div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                            
+                <div class="text-center" id="description" style="display: none">
+                    
+                    <div class="row">
+                        <div class="col-md-7">
+                        <p>
+                            soundtrap.io is a low-power acoustic logger for conservation.
+                            It captures sound in the surronding environment, listening for
+                            specific triggers and recording when needed. The hardware design
+                            is provided open-source for everyone to develop and improve.
+                        </p>
+                        {# <p>Tell me more »</p> #}
+                        
+                        <hr/>
+                        
+                        <p>
+                            A prototype of soundtrap.io is available for beta testing.
+                            The first public release is scheduled for Spring 2016.
+                        </p>
+                        <p><a href="{% url 'contact' %}">Register interest »</a></p>
+                        </div>
+                        
+                        <div class="col-md-5">
+                            <img class="img-responsive center-block img-thumbnail" src="{% static 'project/img/handheld.jpg' %}" alt="soundtrap.io device">
+                        </div>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+        
+        <div class="row">
+            
+            <div class="col-sm-6">
+                <div class="example-title">Illegal Logging</div>
+                <img class="img-responsive center-block" src="{% static 'project/img/logging.jpg' %}">
+            </div>
+            
+            <div class="col-sm-6">
+                <div class="example-title">Endangered species disovery</div>
+                <img class="img-responsive center-block" src="{% static 'project/img/newforest.jpg' %}">
+            </div>
+            
+        </div>
+    
+        <div class="row">
+            
+            <div class="col-sm-6">
+                <div class="example-title">Soundscape monitoring</div>
+                <img class="img-responsive center-block" src="{% static 'project/img/urbanpark.jpg' %}">
+            </div>
+            
+            <div class="col-sm-6">
+                <div class="example-title">Mosquito detection</div>
+                <img class="img-responsive center-block" src="{% static 'project/img/mosquito.jpg' %}">
+            </div>
+            
+        </div>
+        
+        <div class="row">
+            
+            <div class="example-title">What else can you develop?</div>
+            
+            <div class="col-sm-6">
+                <img class="img-responsive center-block" src="{% static 'project/img/else.png' %}">
+            </div>
+            
+            <div class="col-sm-6 visible-md visible-lg">
+                <img class="img-responsive center-block" src="{% static 'project/img/else.png' %}">
+            </div>
+            
+        </div>
+        
+    </div>
+    
+
+
+
+
+{% endblock %}
+
+{% block footer %}
+{{ block.super }}
+{% endblock %}
